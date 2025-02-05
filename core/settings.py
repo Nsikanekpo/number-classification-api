@@ -132,11 +132,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Allow all origins (for testing purposes)
-CORS_ALLOW_ALL_ORIGINS =  [
-    "https://number-classification-api-dijq.onrender.com",
-    "http://127.0.0.1:8000",  # Allow local testing
-]
-     
+CORS_ALLOW_ALL_ORIGINS = True
+       
 
 # Allow specific HTTP methods
 CORS_ALLOW_METHODS = [
