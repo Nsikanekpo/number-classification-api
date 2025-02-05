@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-=jl3(c=z3)5zn3b4&!-_6a2ttuwlsumv^te+wreu$krp=p5s=i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["number-classification-api-dijq.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
@@ -132,7 +132,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 # Allow all origins (for testing purposes)
-CORS_ALLOW_ALL_ORIGINS = True  # Remove this in production
+CORS_ALLOW_ALL_ORIGINS =  [
+    "https://number-classification-api-dijq.onrender.com",
+    "http://127.0.0.1:8000",  # Allow local testing
+]
+     
 
 # Allow specific HTTP methods
 CORS_ALLOW_METHODS = [
